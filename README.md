@@ -13,4 +13,4 @@ Ciele: <br /> 1) základný dizajn s homepage, zobrazenie par vtipov z array, da
        3) funkčné prihlasovanie prepojené s databzou userov na BE, pridavanie vtipov <br />
        4) pridavanie do obľubených + vylepšenia a oprava chýb <br />
 
-![alt text](https://github.com/MartinNovysedlak/Smej-sa.../blob/main/Navrh.png)
+![alt text](https://github.com/MartinNovysedlak/Smej-sa.../blob/main/Navrh 2.png)
