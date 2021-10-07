@@ -28,8 +28,8 @@
 }
 
 .navigation{
-  margin-top: 2%;
 }
+
 nav{
   font-family: Audiowide;
   color: white;
@@ -37,5 +37,11 @@ nav{
   text-transform: uppercase;
   font-size: 25px;
   margin: 7%;
+}
+.photo{
+
+  height: 2%;
+  width: 2%;
+  float: left;
 }
 
