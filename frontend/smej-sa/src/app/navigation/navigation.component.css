@@ -1,0 +1,41 @@
+.head{
+  background: #1A202C;
+}
+
+.name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 100px;
+}
+
+.spacey{
+  font-family: Audiowide;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  align-items: center;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: end;
+}
+
+.navigation{
+  margin-top: 2%;
+}
+nav{
+  font-family: Audiowide;
+  color: white;
+  display: inline;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 7%;
+}
+
