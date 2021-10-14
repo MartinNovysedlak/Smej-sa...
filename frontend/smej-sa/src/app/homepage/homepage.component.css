@@ -1,0 +1,34 @@
+.mat-card{
+    color: white;
+    background-color: #1A202C;
+    height: 200px;
+    width: 750px;
+    margin: auto;
+    border-radius: 45px;
+}
+.vtipy{
+    padding: 40px;
+    font-size: 28px;
+    list-style-type: none;
+}
+.vtip_obsah{
+    text-align: center;
+    font-style: italic;
+    margin: 15px;
+    padding: 8px;
+    word-spacing: normal;
+    line-height: normal;
+}
+.favorite_icon{
+    right: 20px;
+    bottom: 5px;
+    position: absolute;
+    color: white;
+}
+.favorite_icon:hover{
+    background-color: red;
+}
+mat-icon{
+    size: 50px;
+}
+
