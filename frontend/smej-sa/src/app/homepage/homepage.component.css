@@ -4,7 +4,8 @@
     height: 200px;
     width: 750px;
     margin: auto;
-    border-radius: 45px;
+    margin-bottom: -3%;
+    border-radius: 35px;
 }
 .vtipy{
     padding: 40px;
@@ -21,14 +22,23 @@
 }
 .favorite_icon{
     right: 20px;
-    bottom: 5px;
+    bottom: 12px;
     position: absolute;
     color: white;
+    cursor: pointer;
+    font-size: 30px;
 }
+.circle{
+  font-size: 30px;
+}
+
 .favorite_icon:hover{
-    background-color: red;
+    color: red;
 }
-mat-icon{
-    size: 50px;
+.name{
+  display: inline;
+  margin-left: 3%;
+  margin-top: -2%;
+
 }
 

@@ -1,4 +1,11 @@
 <app-navigation></app-navigation>
 <ul *ngFor="let vtip of vtipy" class="vtipy">
-    <li><mat-card><mat-icon>account_circle</mat-icon>Martin<br><div class="vtip_obsah">Názov vtipu:   {{vtip.meno}} <br> {{vtip.vtip}}</div><br><mat-icon class="favorite_icon">favorite</mat-icon></mat-card></li>
+    <li>
+      <mat-card>
+        <mat-icon class="circle">account_circle</mat-icon>
+        <div class="name">Martin</div><br>
+        <div class="vtip_obsah">Názov vtipu:   {{vtip.meno}}<br> {{vtip.vtip}}</div><br>
+        <mat-icon class="favorite_icon">favorite</mat-icon>
+      </mat-card>
+    </li>
 </ul>

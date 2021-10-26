@@ -13,7 +13,9 @@
   text-transform: uppercase;
   color: #FFFFFF;
   font-size: 100px;
-  margin: 2%;
+  margin: 3%;
+  margin: 3%;
+  cursor: pointer;
 }
 
 .spacey{
@@ -54,7 +56,9 @@ nav{
 .btn:hover {
   background-color: RoyalBlue;
 }
-mat-icon{
-  background-color: red;
-}
+.accountimg{ background-color: deepskyblue; border-radius: 4px;}
+.catgoryimg{ background-color: blue; border-radius: 4px;}
+.addimg{background-color: green; border-radius: 4px;}
+.favoriteimg{background-color: red; border-radius: 4px;}
+.sortimg{background-color: chocolate; border-radius: 4px;}
 
