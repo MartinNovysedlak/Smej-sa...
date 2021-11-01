@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HomepageComponent } from './homepage.component';
 
@@ -22,7 +22,11 @@ describe('HomepageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should show a jokes', ()=>{
-    expect(fixture.nativeElement.querySelectorAll('li')[0].getAttribute('*ngFor')).toEqual('let vtip of vtipy');
-  });
+  it('should show jokes', waitForAsync(()=>{
+    expect(fixture.nativeElement.querySelector('li').textContent).toEqual('account_circleMartin - Ide traktor a zabočífavorite');
+  }));
+  it('should use ngFor', waitForAsync(()=>{
+    expect(fixture.nativeElement.querySelectorAll('ul')[0].getAttribute('routerlink')).toEqual('let vtip of vtipy');
+  }));
+
 });

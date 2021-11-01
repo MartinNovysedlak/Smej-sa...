@@ -1,5 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NavigationComponent } from './navigation.component';
 
 describe('NavigationComponent', () => {
@@ -22,5 +21,13 @@ describe('NavigationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
+ /* it('shold contain link to dashboard', waitForAsync(()=>{
+    expect(fixture.nativeElement.querySelectorAll('button')[0].getAttribute('routerlink')).toEqual('/user');
+ }));
+ it('shold contain link to add page', waitForAsync(()=>{
+  expect(fixture.nativeElement.querySelectorAll('button')[2].getAttribute('routerlink')).toEqual('/addpage');
+}));
+it('shold contain four navigation buttons', waitForAsync(()=>{
+  expect(fixture.nativeElement.querySelector('button').lenght).toEqual(4);
+}));*/
 });

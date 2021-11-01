@@ -10,7 +10,7 @@ export class JokeServiceService {
  vtipyUrl="http://localhost:8081/Vtip"
   constructor(private http: HttpClient) { }
 
-  getJokes():Observable<Vtipy>{
-    return this.http.get<Vtipy>(this.vtipyUrl)
+  getJokes():Observable<Vtipy[]>{
+    return this.http.get<Vtipy[]>(this.vtipyUrl)
 }
 }
