@@ -22,4 +22,7 @@ describe('HomepageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should show a jokes', ()=>{
+    expect(fixture.nativeElement.querySelectorAll('li')[0].getAttribute('*ngFor')).toEqual('let vtip of vtipy');
+  });
 });
