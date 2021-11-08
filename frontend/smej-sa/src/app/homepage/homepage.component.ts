@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Vtipy } from '../vtipy';
 import { VTIPY } from '../mock-vtipy';
+import { isPromise } from '@angular/compiler/src/util';
+import { JokeServiceService } from '../joke-service.service'
 
 @Component({
   selector: 'app-homepage',
@@ -9,9 +11,13 @@ import { VTIPY } from '../mock-vtipy';
 })
 export class HomepageComponent implements OnInit {
   vtipy=VTIPY;
-  constructor() { }
+  vtipY:Vtipy[] | undefined;
+  constructor(private jokeService:JokeServiceService) { }
 
   ngOnInit(): void {
   }
-
+  get (): void {
+    this.jokeService.getJokes()
+    .subscribe(vtipy => this.vtipY = vtipy);
+  }
 }

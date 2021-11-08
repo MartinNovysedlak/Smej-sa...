@@ -14,6 +14,7 @@ import {MatOptionModule} from "@angular/material/core";
 import {MatMenuModule} from "@angular/material/menu";
 import { UserpageComponent } from './userpage/userpage.component';
 import { AddpageComponent } from './addpage/addpage.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AddpageComponent } from './addpage/addpage.component';
     MatFormFieldModule,
     MatSelectModule,
     MatOptionModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
