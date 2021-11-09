@@ -9,7 +9,7 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
-    @PostMapping(value = "/Vtip")
+    @GetMapping(value = "/Vtip")
     public void Joke(@RequestBody Joke joke){ jokeService.saveJoke(joke);
     }
 }
