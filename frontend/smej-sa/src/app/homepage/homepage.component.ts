@@ -15,6 +15,8 @@ export class HomepageComponent implements OnInit {
   constructor(private jokeService:JokeServiceService) { }
 
   ngOnInit(): void {
+    this.get();
+    console.log(this,this.vtipY);
   }
   get (): void {
     this.jokeService.getJokes()

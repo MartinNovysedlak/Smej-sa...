@@ -12,6 +12,11 @@ public class JokeServiceImpl implements JokeService{
 
     @Override
     public void saveJoke(Joke joke){jokeRepository.save(joke);}
+
+    @Override
+    public Iterable<Joke> getJokes() {
+        return jokeRepository.findAll();
+    }
 }
 
 

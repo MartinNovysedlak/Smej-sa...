@@ -9,9 +9,11 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
-    @GetMapping(value = "/Vtip")
-    public void Joke(@RequestBody Joke joke){ jokeService.saveJoke(joke);
+    @PostMapping(value = "/Vtip")
+    public void saveJoke(@RequestBody Joke joke){ jokeService.saveJoke(joke);
     }
+    @GetMapping(value = "/getVtip")
+    public Iterable<Joke> getJokes(){return jokeService.getJokes();}
 }
 
 

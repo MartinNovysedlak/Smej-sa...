@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class JokeServiceService {
- vtipyUrl="http://localhost:8081/Vtip"
+ vtipyUrl="http://localhost:8081/getVtip"
   constructor(private http: HttpClient) { }
 
   getJokes():Observable<Vtipy[]>{
