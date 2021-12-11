@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Vtipy } from './vtipy';
+import { Vtipy } from '../Module/vtipy';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({

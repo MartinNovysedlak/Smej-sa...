@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Vtipy } from '../vtipy';
-import { VTIPY } from '../mock-vtipy';
+import { Vtipy } from '../../Module/vtipy';
+import { VTIPY } from '../../Module/mock-vtipy';
 import { isPromise } from '@angular/compiler/src/util';
-import { JokeServiceService } from '../joke-service.service'
+import { JokeServiceService } from '../../Services/joke-service.service'
 
 @Component({
   selector: 'app-homepage',
