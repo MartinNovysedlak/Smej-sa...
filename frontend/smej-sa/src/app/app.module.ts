@@ -15,6 +15,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import { UserpageComponent } from './userpage/userpage.component';
 import { AddpageComponent } from './addpage/addpage.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RegisterpageComponent } from './registerpage/registerpage.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     HomepageComponent,
     NavigationComponent,
     UserpageComponent,
-    AddpageComponent
+    AddpageComponent,
+    RegisterpageComponent
   ],
   imports: [
     BrowserModule,

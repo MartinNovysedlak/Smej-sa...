@@ -1,1 +1,17 @@
 <app-navigation></app-navigation>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active"> Prihlásiť sa </h2>
+
+    <form>
+      <input formControlName="username" type="text" id="login" name="login" placeholder="Prihlasovacie meno">
+      <input formControlName="password" type="password" id="password" name="login"  autocomplete="off" autocapitalize="off"
+             autocorrect="off"  placeholder="Heslo">
+      <input [disabled]="!loginGroup.valid" type="submit" value="Prihlásiť" >
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/register">Nemáte účet?</a>
+    </div>
+  </div>
+</div>
