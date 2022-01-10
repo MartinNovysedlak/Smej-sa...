@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-userpage',
@@ -15,7 +16,7 @@ export class UserpageComponent implements OnInit {
   });
 
 
-  constructor(private readonly router: Router) { }
+  constructor(private readonly router: Router, private readonly userService:UserService) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +25,7 @@ export class UserpageComponent implements OnInit {
     if (this.loginGroup.valid) {
       const username = this.loginGroup.value.username;
       const password = this.loginGroup.value.password;
+      this.userService.login(username,password).subscribe();
     }
   }
 }

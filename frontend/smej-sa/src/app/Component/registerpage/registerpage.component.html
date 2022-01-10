@@ -3,12 +3,12 @@
   <div id="formContent">
     <h2 class="active"> Zaregistrovať sa </h2>
 
-    <form>
+    <form [formGroup]="userForm">
       <input formControlName="firstName" type="text" id="name" autocomplete="off" autocapitalize="off" name="login" placeholder="Meno">
       <input formControlName="lastName" type="text" id="lastName" autocomplete="off" autocapitalize="off" name="login" placeholder="Priezvisko">
       <input formControlName="login" type="text" id="login" name="login" placeholder="Prihlasovacie meno">
       <input formControlName="password" type="password" id="password" name="login"  autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="Heslo">
-      <input type="submit"  [disabled]="!submit" value="Registrovať" >
+      <button mat-raised-button type="submit"  [disabled]="!submit" value="Registrovať" (click)="register()">Registrovať</button>
     </form>
 
     <div id="formFooter">
