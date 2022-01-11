@@ -16,6 +16,8 @@ import { UserpageComponent } from './Component/userpage/userpage.component';
 import { AddpageComponent } from './Component/addpage/addpage.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterpageComponent } from './Component/registerpage/registerpage.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,10 @@ import { RegisterpageComponent } from './Component/registerpage/registerpage.com
     MatSelectModule,
     MatOptionModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,11 +3,11 @@
   <div id="formContent">
     <h2 class="active"> Prihlásiť sa </h2>
 
-    <form>
+    <form [formGroup]="loginGroup">
       <input formControlName="username" type="text" id="login" name="login" placeholder="Prihlasovacie meno">
       <input formControlName="password" type="password" id="password" name="login"  autocomplete="off" autocapitalize="off"
              autocorrect="off"  placeholder="Heslo">
-      <input [disabled]="!loginGroup.valid" type="submit" value="Prihlásiť" >
+      <button mat-raised-button color="primary" [disabled]="!loginGroup.valid" type="submit" value="Prihlásiť" (click)="login()">Prihlásiť</button>
     </form>
 
     <div id="formFooter">
