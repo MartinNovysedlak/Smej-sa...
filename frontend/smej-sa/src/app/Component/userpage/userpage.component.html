@@ -4,7 +4,7 @@
     <h2 class="active"> Prihlásiť sa </h2>
 
     <form [formGroup]="loginGroup">
-      <input formControlName="username" type="text" id="login" name="login" placeholder="Prihlasovacie meno">
+      <input formControlName="username" type="text" id="login" name="login" placeholder="E-mail">
       <input formControlName="password" type="password" id="password" name="login"  autocomplete="off" autocapitalize="off"
              autocorrect="off"  placeholder="Heslo">
       <button mat-raised-button color="primary" [disabled]="!loginGroup.valid" type="submit" value="Prihlásiť" (click)="login()">Prihlásiť</button>

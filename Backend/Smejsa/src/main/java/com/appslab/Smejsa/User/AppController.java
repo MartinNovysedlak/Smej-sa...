@@ -1,16 +1,22 @@
 package com.appslab.Smejsa.User;
-
+/*
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
 @Controller
 public class AppController {
+    private final UserService userService;
+
+    public AppController(UserService userService) {
+        this.userService = userService;
+    }
 
     @Autowired
     private UserRepository userRepo;
@@ -45,4 +51,12 @@ public class AppController {
 
         return "users";
     }
-}
+    @GetMapping("/user")
+    public void getUser() {
+    }
+    @PostMapping("/postUser")
+    public void postUser(@RequestBody User user){
+        System.out.println(user.getEmail());
+        userService.saveUser(user);
+    }
+}*/
