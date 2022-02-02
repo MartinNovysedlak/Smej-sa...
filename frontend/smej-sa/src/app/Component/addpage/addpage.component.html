@@ -1,1 +1,5 @@
 <app-navigation></app-navigation>
+    <form [formGroup]="userJokeForm">
+        <input formControlName="joke" type="text" autocomplete="off" autocapitalize="off" placeholder="Vtip">
+    </form>
+    <button mat-raised-button (click)="addJoke()" color="primary">Pridať vtip</button>
