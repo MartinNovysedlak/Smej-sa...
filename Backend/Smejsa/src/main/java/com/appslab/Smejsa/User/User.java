@@ -1,6 +1,9 @@
 package com.appslab.Smejsa.User;
 
+import com.appslab.Smejsa.Jokes.Joke;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -21,6 +24,9 @@ public class User {
 
     @Column(name = "last_name", nullable = false, length = 20)
     private String lastName;
+
+    @ManyToOne
+    private List<Joke> jokes;
 
     public Long getId() {
         return id;

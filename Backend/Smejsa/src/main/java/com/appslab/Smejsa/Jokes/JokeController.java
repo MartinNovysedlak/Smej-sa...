@@ -14,6 +14,11 @@ public class JokeController {
     }
     @GetMapping(value = "/getVtip")
     public Iterable<Joke> getJokes(){return jokeService.getJokes();}
+
+    @GetMapping("/deleteVtip/{id}")
+    public void deleteJoke(@PathVariable long id) {
+        jokeService.deleteJoke(id);
+    }
 }
 
 

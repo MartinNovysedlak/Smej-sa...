@@ -1,4 +1,6 @@
 package com.appslab.Smejsa.Jokes;
+import com.appslab.Smejsa.User.User;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,6 +9,9 @@ public class Joke {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String vtip;
+
+    @ManyToOne
+    private User user;
 
     public Joke(){
     }

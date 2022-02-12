@@ -17,6 +17,11 @@ public class JokeServiceImpl implements JokeService{
     public Iterable<Joke> getJokes() {
         return jokeRepository.findAll();
     }
+
+    @Override
+    public void deleteJoke(long id) {
+
+    }
 }
 
 
