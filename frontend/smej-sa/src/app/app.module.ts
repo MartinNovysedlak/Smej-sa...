@@ -19,6 +19,7 @@ import { RegisterpageComponent } from './Component/registerpage/registerpage.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthInterceptor } from './auth.interceptor/auth.interceptor';
+import { UserjokeComponent } from './Component/userjoke/userjoke.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuthInterceptor } from './auth.interceptor/auth.interceptor';
     NavigationComponent,
     UserpageComponent,
     AddpageComponent,
-    RegisterpageComponent
+    RegisterpageComponent,
+    UserjokeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,60 @@
+.mat-card{
+  color: white;
+  background-color: #1A202C;
+  height: 200px;
+  width: 750px;
+  margin: auto;
+  margin-bottom: -3%;
+  border-radius: 35px;
+}
+.vtipy{
+  padding: 40px;
+  font-size: 28px;
+  list-style-type: none;
+}
+.vtip_obsah{
+  text-align: center;
+  font-style: italic;
+  margin: 15px;
+  padding: 8px;
+  word-spacing: normal;
+  line-height: normal;
+}
+.favorite_icon{
+  right: 20px;
+  bottom: 12px;
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+}
+.circle{
+  font-size: 30px;
+}
+
+.favorite_icon:hover{
+  color: red;
+}
+.name{
+  display: inline;
+  margin-left: 3%;
+  margin-top: -2%;
+
+}
+.myjoke{
+  display: inline-block;
+  color: white;
+  margin-top: 2%;
+  margin-left: 20%;
+  font-size: 40px;
+}
+
+.logout{
+  color: white;
+  display: inline-block;
+  font-size: 40px;
+  margin-left: 40%;
+}
+.logout:hover{
+  cursor: pointer;
+}

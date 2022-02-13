@@ -1,0 +1,13 @@
+<app-navigation></app-navigation>
+<div class="myjoke" >Vaše vtipy:</div>
+<div class="logout" routerLink="/home" (click)="Submit()">Odhlásiť sa</div>
+<ul *ngFor="let vtip of vtipY" class="vtipy">
+  <li>
+    <mat-card>
+      <mat-icon class="circle">account_circle</mat-icon>
+      <div class="name">Martin</div><br>
+      <div class="vtip_obsah"> {{vtip.vtip}}</div><br>
+      <mat-icon class="favorite_icon">favorite</mat-icon>
+    </mat-card>
+  </li>
+</ul>
