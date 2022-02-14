@@ -6,13 +6,13 @@
     <form [formGroup]="userForm">
       <input formControlName="firstName" type="text" id="name" autocomplete="off" autocapitalize="off" name="login" placeholder="Meno">
       <input formControlName="lastName" type="text" id="lastName" autocomplete="off" autocapitalize="off" name="login" placeholder="Priezvisko">
-      <input formControlName="login" type="text" id="login" name="login" placeholder="Prihlasovacie meno">
+      <input formControlName="login" type="text" id="login" name="login" placeholder="E-mail">
       <input formControlName="password" type="password" id="password" name="login"  autocomplete="off" autocapitalize="off" autocorrect="off" placeholder="Heslo">
-      <button mat-raised-button type="submit"  [disabled]="!submit" value="Registrovať" (click)="register()">Registrovať</button>
+      <button mat-raised-button type="submit"  [disabled]="!submit" value="Registrovať" (click)="register()" routerLink="/user">Registrovať</button>
     </form>
 
     <div id="formFooter">
-      <a class="underlineHover" routerLink="/user">Už máte účet?</a>
+      <a class="underlineHover" routerLink="/login">Už máte účet?</a>
     </div>
   </div>
 </div>

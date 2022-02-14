@@ -9,17 +9,14 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
-    @PostMapping(value = "/Vtip")
+    @PostMapping("/Vtip")
     public void saveJoke(@RequestBody Joke joke){ jokeService.saveJoke(joke);
     }
     @GetMapping(value = "/getVtip")
     public Iterable<Joke> getJokes(){return jokeService.getJokes();}
+
+    @DeleteMapping(value = "/deleteVtip/{id}")
+    public void deleteJoke(@PathVariable long id) {
+        jokeService.deleteJoke(id);
+    }
 }
-
-
-
-
-
-
-
-

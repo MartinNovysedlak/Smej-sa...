@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registerpage',
@@ -20,18 +21,18 @@ export class RegisterpageComponent implements OnInit {
     return this.userForm.valid;
   }
 
-  constructor(private readonly userService:UserService) { }
+  constructor(private readonly userService:UserService, private readonly router: Router) { }
 
   ngOnInit(): void {
   }
 
   register(){
     if (this.userForm.valid) {
-      const username = this.userForm.value.login;
+      const email = this.userForm.value.login;
       const password = this.userForm.value.password;
       const firstName = this.userForm.value.firstName;
       const lastName = this.userForm.value.lastName;
-      this.userService.register(username,password, firstName,lastName).subscribe();
+      this.userService.register(email,password, firstName,lastName).subscribe(() => this.router.navigateByUrl('/user'));
     }
   }
 

@@ -1,4 +1,4 @@
-export interface Vtipy{
+export interface Vtip{
     id:number;
     vtip:string;
 }

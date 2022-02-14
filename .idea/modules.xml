@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Smej-sa.iml" filepath="$PROJECT_DIR$/.idea/Smej-sa.iml" />
       <module fileurl="file://$PROJECT_DIR$/Backend/Smejsa/Smejsa.iml" filepath="$PROJECT_DIR$/Backend/Smejsa/Smejsa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontend/smej-sa/smej-sa.iml" filepath="$PROJECT_DIR$/frontend/smej-sa/smej-sa.iml" />
     </modules>
   </component>
 </project>

@@ -18,6 +18,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterpageComponent } from './Component/registerpage/registerpage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { AuthInterceptor } from './auth.interceptor/auth.interceptor';
+import { UserjokeComponent } from './Component/userjoke/userjoke.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
     NavigationComponent,
     UserpageComponent,
     AddpageComponent,
-    RegisterpageComponent
+    RegisterpageComponent,
+    UserjokeComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,12 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

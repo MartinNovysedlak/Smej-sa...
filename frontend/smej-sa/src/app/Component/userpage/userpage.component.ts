@@ -23,9 +23,9 @@ export class UserpageComponent implements OnInit {
 
   login(): void {
     if (this.loginGroup.valid) {
-      const username = this.loginGroup.value.username;
+      const email = this.loginGroup.value.username;
       const password = this.loginGroup.value.password;
-      this.userService.login(username,password).subscribe();
+      this.userService.login(email,password).subscribe(() => this.router.navigateByUrl('/home'));
     }
   }
 }

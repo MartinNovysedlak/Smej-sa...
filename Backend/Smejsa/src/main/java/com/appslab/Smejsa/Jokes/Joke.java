@@ -8,11 +8,11 @@ public class Joke {
     private Long id;
     private String vtip;
 
-    public Joke(){
+    public Joke(String vtip) {
+        this.vtip = vtip;
     }
 
-    public Joke(Long id) {
-        this.id = id;
+    public Joke(){
     }
 
     public Long getId() {
