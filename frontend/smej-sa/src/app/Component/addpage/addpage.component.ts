@@ -11,7 +11,7 @@ import { JokeServiceService } from 'src/app/Services/joke-service.service';
 export class AddpageComponent implements OnInit {
 
   userJokeForm = new FormGroup({
-    joke: new FormControl("", Validators.required),
+    vtip: new FormControl("", Validators.required),
   });
 
   constructor( private readonly jokeService:JokeServiceService, private readonly router: Router) { }

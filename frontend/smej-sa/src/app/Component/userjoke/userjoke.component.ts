@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Vtipy } from '../../Module/vtipy';
+import { Vtip } from '../../Module/vtipy';
 import { VTIPY } from '../../Module/mock-vtipy';
 import { isPromise } from '@angular/compiler/src/util';
 import { JokeServiceService } from '../../Services/joke-service.service'
@@ -14,7 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 export class UserjokeComponent implements OnInit {
 
   vtipy=VTIPY;
-  vtipY:Vtipy[] | undefined;
+  vtipY:Vtip[] | undefined;
   constructor(private jokeService:JokeServiceService,  private UserService: UserService) { }
 
   ngOnInit(): void {

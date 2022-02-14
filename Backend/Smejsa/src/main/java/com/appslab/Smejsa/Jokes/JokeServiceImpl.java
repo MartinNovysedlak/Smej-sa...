@@ -20,9 +20,8 @@ public class JokeServiceImpl implements JokeService{
 
     @Override
     public void deleteJoke(long id) {
-
+        jokeRepository.deleteById(id);}
     }
-}
 
 
 
