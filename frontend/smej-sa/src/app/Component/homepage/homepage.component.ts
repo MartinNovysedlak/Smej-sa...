@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Vtipy } from '../../Module/vtipy';
-import { VTIPY } from '../../Module/mock-vtipy';
 import { isPromise } from '@angular/compiler/src/util';
 import { JokeServiceService } from '../../Services/joke-service.service'
 
@@ -10,7 +9,6 @@ import { JokeServiceService } from '../../Services/joke-service.service'
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  vtipy=VTIPY;
   vtipY:Vtipy[] | undefined;
   constructor(private jokeService:JokeServiceService) { }
 
@@ -21,5 +19,8 @@ export class HomepageComponent implements OnInit {
   get (): void {
     this.jokeService.getJokes()
     .subscribe(vtipy => this.vtipY = vtipy);
+  }
+  delete(joke:Vtipy){
+    this.jokeService.deleteJoke(joke).subscribe();
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { JokeServiceService } from 'src/app/Services/joke-service.service';
 
 @Component({
   selector: 'app-addpage',
@@ -12,11 +14,12 @@ export class AddpageComponent implements OnInit {
     joke: new FormControl("", Validators.required),
   });
 
-  constructor() { }
+  constructor( private readonly jokeService:JokeServiceService, private readonly router: Router) { }
 
   ngOnInit(): void {
   }
   addJoke(){
+    this.jokeService.addJoke(this.userJokeForm.value).subscribe(()=>this.router.navigateByUrl('/home'));
     console.log(this.userJokeForm.value)
   }
 
