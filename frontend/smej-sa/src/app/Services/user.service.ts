@@ -43,7 +43,7 @@ export class UserService {
   }
   logout(): void {
     this.token = new BehaviorSubject("");
-    this.router.navigateByUrl('/login-form');
+    this.router.navigateByUrl('/login');
   }
 
 }
