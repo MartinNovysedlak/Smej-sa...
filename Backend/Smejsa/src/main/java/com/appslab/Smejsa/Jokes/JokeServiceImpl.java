@@ -1,6 +1,9 @@
 package com.appslab.Smejsa.Jokes;
 
+import com.appslab.Smejsa.User.UserService;
 import org.springframework.stereotype.Service;
+
+import java.util.Set;
 
 @Service
 public class JokeServiceImpl implements JokeService{
@@ -21,6 +24,11 @@ public class JokeServiceImpl implements JokeService{
     @Override
     public void deleteJoke(long id) {
         jokeRepository.deleteById(id);}
+
+    @Override
+    public Set<Joke> showUserJokes() {
+        return UserService.getCurrentUser().getJokes();
+    }
     }
 
 

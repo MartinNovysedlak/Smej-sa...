@@ -1,5 +1,6 @@
 package com.appslab.Smejsa.User;
 
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +34,15 @@ public class UserServicelpml implements UserService{
     public void saveUser(User user) {
         user.setPassword(encoder.encode(user.getPassword()));
         userRepository.save(user);
+    }
+
+    @Override
+    public User getCurrentUser() {
+        CustomUserDetails userDetails = (CustomUserDetails) SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getPrincipal();
+        String email = userDetails.getFullName();
+        return this.userRepository.findByEmail(email).orElseThrow();
     }
 }

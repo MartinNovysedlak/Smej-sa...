@@ -1,4 +1,5 @@
 package com.appslab.Smejsa.Jokes;
+import com.appslab.Smejsa.User.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,5 +19,10 @@ public class JokeController {
     @DeleteMapping(value = "/deleteVtip/{id}")
     public void deleteJoke(@PathVariable long id) {
         jokeService.deleteJoke(id);
+    }
+
+    @GetMapping("/showuserjokes")
+    public Iterable<Joke> showUserJokes() {
+        return UserService.getCurrentUser().getJokes();
     }
 }

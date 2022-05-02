@@ -1,10 +1,24 @@
 package com.appslab.Smejsa.User;
 
+import com.appslab.Smejsa.Jokes.Joke;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
 public class User {
+    @OneToMany(mappedBy = "users")
+    public Set<Joke> jokes;
+
+    public User(Long id, String email, String password, String firstName, String lastName, Set<Joke> jokes) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.jokes = jokes;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,6 +74,14 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Set<Joke> getJokes() {
+        return jokes;
+    }
+
+    public void setItems(Set<Joke> jokes) {
+        this.jokes = jokes;
     }
 }
 
